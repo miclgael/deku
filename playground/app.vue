@@ -1,0 +1,3 @@
+<template>
+  <deku-test />
+</template>
