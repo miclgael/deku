@@ -70,6 +70,7 @@ const dismissAlert = () => {
     right: 1rem;
     width: 20rem;
     z-index: 1000;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.1);
   }
 }
 

@@ -3,7 +3,7 @@
     element="main"
     :use-container="false"
   >
-    <deku-section theme="red">
+    <deku-section theme="gray-1">
       <div class="grid grid--2 grid--align-center grid--space-between">
         <h1>Deku sandbox</h1>
         <div class="grid__last">
@@ -18,7 +18,7 @@
       </div>
     </deku-section>
 
-    <deku-section theme="red">
+    <deku-section theme="gray-2">
       <h1>Deku Test Sandbox</h1>
       <p>
         This is a sandbox for testing deku components. It is not intended to be
@@ -47,7 +47,7 @@
       </deku-accordion>
     </deku-section>
 
-    <deku-section theme="orange">
+    <deku-section theme="gray-3">
       <h2>A list of potential components from component.gallery</h2>
       <ul>
         <li>Accordion ✅</li>
@@ -90,7 +90,7 @@
     </deku-section>
 
     <deku-section
-      theme="blue"
+      theme="gray-2"
       :use-container="false"
     >
       <KitchenSink />

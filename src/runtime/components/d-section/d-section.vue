@@ -19,7 +19,14 @@ defineProps({
    */
   theme: {
     type: String,
-    default: null
+    default: null,
+    validator: (value: string) => {
+      return [
+        'gray-1',
+        'gray-2',
+        'gray-3',
+      ].includes(value)
+    }
   },
 })
 </script>
@@ -27,7 +34,8 @@ defineProps({
 <template>
   <component
     :is="element"
-    :class="[ 'section', 'section--theme' ]"
+    class="d-section"
+    :data-theme="theme"
   >
     <div
       v-if="useContainer"
