@@ -14,7 +14,10 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Nuxt module with just the basics for doing amazing things.
+<div style="text-align:center;">
+<img alt="Deku nut sticker from super smash bros" src=".github/images/deku-nut-sticker.png">
+<p>A <em>stunning</em> Nuxt 3 module (with just the basics).</p>
+</div>
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/deku-ui?file=playground%2Fapp.vue) -->
@@ -23,9 +26,9 @@ Nuxt module with just the basics for doing amazing things.
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- ⛰ &nbsp;Some components
+- 🚠 &nbsp;Some helpers
+- 🌲 &nbsp;Some bits and bobs
 
 ## Quick Setup
 
@@ -48,7 +51,10 @@ npm install --save-dev deku-ui
 export default defineNuxtConfig({
   modules: [
     'deku-ui'
-  ]
+  ],
+  deku: {
+    // Options
+  }
 })
 ```
 
