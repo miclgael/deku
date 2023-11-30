@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 
-type DekuPluginOptions = {
+export interface DekuPluginOptions {
   message?: string
 }
 

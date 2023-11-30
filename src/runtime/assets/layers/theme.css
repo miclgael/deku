@@ -1,0 +1,12 @@
+/* Colours */
+@layer theme {
+  [data-theme="dark"] {
+    background-color: black;
+    color: white;
+  }
+
+  [data-theme="light"] {
+    background-color: white;
+    color: black;
+  }
+}

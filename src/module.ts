@@ -1,30 +1,62 @@
 import { defineNuxtModule, addPlugin, createResolver, addComponent } from '@nuxt/kit'
 
-
 // Module options TypeScript interface definition
-export interface ModuleOptions { }
+export interface ModuleOptions {
+  useBaseStyles: boolean
+  usePlugins: boolean
+  useComponents: boolean
+  useMeta: boolean
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'deku-ui',
     configKey: 'deku'
   },
+
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    useBaseStyles: true,
+    usePlugins: true,
+    useComponents: true,
+    useMeta: true
+  },
+
   setup(options, nuxt) {
-    const resolver = createResolver(import.meta.url)
+    const { resolve } = createResolver(import.meta.url)
 
-    console.log(options.anOption);
+    // Add CSS
+    if (options.useBaseStyles) {
+      nuxt.options.css.push(
+        resolve('runtime/assets/main.css')
+      )
+    }
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    if (options.useMeta) {
+      nuxt.options.app.head.bodyAttrs = {
+        ...nuxt.options.app.head.bodyAttrs,
+        'data-theme': 'light'
+      }
+    }
 
-    // From the runtime directory
-    addComponent({
-      name: 'DekuTest', // name of the component to be used in vue templates
-      // export: 'DekuTest', // (optional) if the component is a named (rather than default) export
-      filePath: resolver.resolve('runtime/components/deku-test.vue')
-    })
+    if (options.usePlugins) {
+      // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
+      addPlugin(resolve('./runtime/plugin'))
+    }
 
+    if (options.useComponents) {
+      const components = [
+        {
+          name: 'DekuTest',
+          filePath: resolve('runtime/components/deku-test.vue'),
+        },
+        {
+          name: 'DekuSection',
+          filePath: resolve('runtime/components/d-section/d-section.vue')
+        }
+      ]
+
+      components.forEach((component) => addComponent(component))
+    }
   }
 })

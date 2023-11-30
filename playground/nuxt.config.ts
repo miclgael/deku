@@ -1,7 +1,10 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
   deku: {
-    anOption: 'an option'
+    useBaseStyles: true,
+    usePlugins: true,
+    useComponents: true,
+    useMeta: true
   },
   devtools: { enabled: true }
 })
