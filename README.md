@@ -16,7 +16,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 <div style="text-align:center;">
 <img alt="Deku nut sticker from super smash bros" src=".github/images/deku-nut-sticker.png">
-<p>A <em>stunning</em> Nuxt 3 module (with just the basics).</p>
+<p><a href="https://zeldawiki.wiki/wiki/Deku_Nut">Deku</a> is a <em>stunning</em> Nuxt 3 module (with just the basics).</p>
 </div>
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)

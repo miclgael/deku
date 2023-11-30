@@ -53,6 +53,14 @@ export default defineNuxtModule<ModuleOptions>({
         {
           name: 'DekuSection',
           filePath: resolve('runtime/components/d-section/d-section.vue')
+        },
+        {
+          name: 'DekuAccordion',
+          filePath: resolve('runtime/components/d-accordion/d-accordion.vue')
+        },
+        {
+          name: 'DekuAlert',
+          filePath: resolve('runtime/components/d-alert/d-alert.vue')
         }
       ]
 

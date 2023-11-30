@@ -6,9 +6,15 @@
     <deku-section theme="red">
       <div class="grid grid--2 grid--align-center grid--space-between">
         <h1>Deku sandbox</h1>
-        <p class="grid__last">
-          Stunning!
-        </p>
+        <div class="grid__last">
+          <img
+            :src="sticker"
+            alt="Deku nut sticker from Super smash bros"
+          >
+          <p>
+            <em>Stunning!</em>
+          </p>
+        </div>
       </div>
     </deku-section>
 
@@ -18,13 +24,34 @@
         This is a sandbox for testing deku components. It is not intended to be
         used as a template for a real project.
       </p>
+
+      <deku-accordion>
+        <template #summary>
+          Accordion
+        </template>
+
+        <p>
+          This is an accordion component. It is a wrapper around the HTML
+          <code>details</code> element.
+        </p>
+
+        <deku-accordion>
+          <template #summary>
+            Nested
+          </template>
+          <p>
+            This is a nested accordion component. It is a wrapper around the HTML
+            <code>details</code> element.
+          </p>
+        </deku-accordion>
+      </deku-accordion>
     </deku-section>
 
     <deku-section theme="orange">
       <h2>A list of potential components from component.gallery</h2>
       <ul>
-        <li>Accordion</li>
-        <li>Alert</li>
+        <li>Accordion ✅</li>
+        <li>Alert ✅</li>
         <li>Avatar</li>
         <li>Badge</li>
         <li>Breadcrumb</li>
@@ -69,10 +96,23 @@
       <KitchenSink />
     </deku-section>
   </deku-section>
+  <deku-alert level="warning">
+    <template #title>
+      Alert
+    </template>
+    <p>
+      This is an alert component. It's default level is <code>info</code>.
+    </p>
+  </deku-alert>
 </template>
+
+<script setup>
+import sticker from '@/assets/images/deku-nut-sticker.png'
+</script>
 
 <script>
 import KitchenSink from './fixtures/kitchen-sink.vue'
+
 export default {
   components: {
     KitchenSink

@@ -11,9 +11,20 @@
     color: inherit;
     text-decoration: underline;
   }
-
   a:hover {
-    color: blue;
+    color: var(--color-primary);
+  }
+  a:visited {
+    color: color-mix(in srgb, var(--color-primary) 20%, var(--color-visited));
+  }
+  a:visited:hover {
+    color: color-mix(in srgb, var(--color-primary) 50%, var(--color-visited));
+  }
+  a:active {
+    color: color-mix(in srgb, var(--color-active) 80%, white);
+  }
+  a:active:hover {
+    color: color-mix(in srgb, var(--color-active) 50%, white);
   }
 
   button {
@@ -27,5 +38,12 @@
     border-style: solid;
     border-width: 1px;
     padding: 0.5em;
+  }
+
+  :root {
+    --color-scheme: light dark;
+    --color-primary: blue;
+    --color-visited: purple;
+    --color-active: green;
   }
 }
