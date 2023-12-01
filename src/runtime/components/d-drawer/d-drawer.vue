@@ -87,6 +87,7 @@ defineEmits(['update:open'])
     transform: translateX(-100%);
     max-width: 768px;
     padding: 1rem;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
   }
 
   .d-drawer--open .d-drawer__content {
