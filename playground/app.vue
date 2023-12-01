@@ -48,45 +48,81 @@
     </deku-section>
 
     <deku-section theme="gray-3">
-      <h2>A list of potential components from component.gallery</h2>
-      <ul>
-        <li>Accordion ✅</li>
-        <li>Alert ✅</li>
-        <li>Avatar</li>
-        <li>Badge</li>
-        <li>Breadcrumb</li>
-        <li>Button</li>
-        <li>Button Group</li>
-        <li>Card</li>
-        <li>Drawer (panel)</li>
-        <li>Dropdown menu</li>
-        <li>Message</li>
-        <li>Fieldset</li>
-        <li>Form</li>
-        <li>Footer</li>
-        <li>Header</li>
-        <li>Hero</li>
-        <li>Icon</li>
-        <li>Image</li>
-        <li>Heading</li>
-        <li>Label</li>
-        <li>List</li>
-        <li>Modal</li>
-        <li>Navigation</li>
-        <li>Logo</li>
-        <li>Popover</li>
-        <li>Pagination</li>
-        <li>Progress</li>
-        <li>Quote</li>
-        <li>Spinner</li>
-        <li>Skip Link</li>
-        <li>Table</li>
-        <li>Tabs</li>
-        <li>Toggle</li>
-        <li>Toast</li>
-        <li>Tooltip</li>
-        <li>Gallery</li>
-      </ul>
+      <deku-accordion open>
+        <template #summary>
+          A list of potential components from component.gallery
+        </template>
+        <ul>
+          <li>Accordion ✅ - Yer lookin' at it!</li>
+          <li>Alert ✅ - It's up there ☝️</li>
+          <li>
+            <deku-accordion>
+              <template #summary>
+                Avatar ✅
+              </template>
+              <deku-avatar
+                src="https://picsum.photos/200"
+                alt="A random image"
+              />
+            </deku-accordion>
+          </li>
+          <li>Badge</li>
+          <li>Breadcrumb</li>
+          <li>Button Group</li>
+          <li>Button</li>
+          <li>Card</li>
+          <li>
+            <deku-accordion open>
+              <template #summary>
+                Drawer (panel) ✅
+              </template>
+
+              <deku-drawer
+                :open="nah"
+                @update:open="nah = !nah"
+              >
+                <p>
+                  This is a drawer component.
+                  Close it over there 👉
+                </p>
+              </deku-drawer>
+              <button
+                class="nah"
+                @click="nah = !nah"
+              >
+                Open the drawer
+              </button>
+            </deku-accordion>
+          </li>
+          <li>Dropdown menu</li>
+          <li>Fieldset</li>
+          <li>Footer</li>
+          <li>Form</li>
+          <li>Gallery</li>
+          <li>Header</li>
+          <li>Heading</li>
+          <li>Hero</li>
+          <li>Icon</li>
+          <li>Image</li>
+          <li>Label</li>
+          <li>List</li>
+          <li>Logo</li>
+          <li>Message</li>
+          <li>Modal</li>
+          <li>Navigation</li>
+          <li>Pagination</li>
+          <li>Popover</li>
+          <li>Progress</li>
+          <li>Quote</li>
+          <li>Skip Link</li>
+          <li>Spinner</li>
+          <li>Table</li>
+          <li>Tabs</li>
+          <li>Toast</li>
+          <li>Toggle</li>
+          <li>Tooltip</li>
+        </ul>
+      </deku-accordion>
     </deku-section>
 
     <deku-section
@@ -108,6 +144,8 @@
 
 <script setup>
 import sticker from '@/assets/images/deku-nut-sticker.png'
+
+const nah = ref(false)
 </script>
 
 <script>

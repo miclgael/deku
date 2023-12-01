@@ -61,6 +61,14 @@ export default defineNuxtModule<ModuleOptions>({
         {
           name: 'DekuAlert',
           filePath: resolve('runtime/components/d-alert/d-alert.vue')
+        },
+        {
+          name: 'DekuAvatar',
+          filePath: resolve('runtime/components/d-avatar/d-avatar.vue')
+        },
+        {
+          name: 'DekuDrawer',
+          filePath: resolve('runtime/components/d-drawer/d-drawer.vue')
         }
       ]
 
