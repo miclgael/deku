@@ -22,6 +22,6 @@ export const Default: Story = {
   args: {
     element: 'div',
     useContainer: true,
-    theme: 'default'
+    theme: 'gray-1'
   }
 }
