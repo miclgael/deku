@@ -8,6 +8,10 @@
     "generate": "nuxi generate"
   },
   "devDependencies": {
-    "nuxt": "latest"
+    "@nuxtjs/storybook": "7.0.0",
+    "nuxt": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/node": "^18.17.5"
   }
 }

@@ -10,7 +10,31 @@ defineProps({
   }
 })
 
-defineEmits(['update:open'])
+const emit = defineEmits(['update:open'])
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    emit('update:open', false)
+  }
+}
+
+const opener = ref<HTMLElement | null>(null)
+const drawer = ref<HTMLElement | null>(null)
+
+const handleOpen = () => {
+  console.log($refs.drawer)
+  $refs.drawer?.focus()
+}
+
+onMounted(() => {
+  document?.addEventListener('keydown', handleKeydown)
+  opener.value = document?.activeElement as HTMLElement
+})
+
+onUnmounted(() => {
+  document?.removeEventListener('keydown', handleKeydown)
+})
+
 </script>
 
 <template>
@@ -19,10 +43,12 @@ defineEmits(['update:open'])
     <transition name="d-drawer">
       <div
         v-if="open"
+        ref="drawer"
         class="d-drawer"
         :class="[
           open ? 'd-drawer--open' : null,
         ]"
+        tabindex="0"
       >
         <div class="d-drawer__content">
           <button @click="$emit('update:open', false)">
@@ -72,6 +98,7 @@ defineEmits(['update:open'])
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.5rem);
   }
 
   .d-drawer__content {
