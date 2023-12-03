@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { themes } from '../d-theme/d-theme.config'
+import DekuTheme from '../d-theme/d-theme.vue'
+
 defineProps({
   /**
    * Type of element to be used (e.g. section, main, footer, header, etc.)
@@ -19,15 +22,11 @@ defineProps({
    */
   theme: {
     type: String,
-    default: null,
+    default: 'white',
     validator: (value: string) => {
-      return [
-        'gray-1',
-        'gray-2',
-        'gray-3',
-      ].includes(value)
+      return Object.prototype.hasOwnProperty.call(themes, value)
     }
-  },
+  }
 })
 </script>
 
@@ -35,15 +34,16 @@ defineProps({
   <component
     :is="element"
     class="d-section"
-    :data-theme="theme"
   >
-    <div
-      v-if="useContainer"
-      :class="[ 'section__inside' ]"
-    >
-      <slot />
-    </div>
-    <slot v-else />
+    <deku-theme :theme="theme">
+      <div
+        v-if="useContainer"
+        class="section__inside"
+      >
+        <slot />
+      </div>
+      <slot v-else />
+    </deku-theme>
   </component>
 </template>
 

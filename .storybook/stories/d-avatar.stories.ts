@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import DekuAvatar from '../../src/runtime/components/d-avatar/d-avatar.vue'
 
 const meta = {
-  title: 'DekuAvatar',
+  title: 'Avatar',
   component: DekuAvatar,
   tags: ['autodocs']
 } satisfies Meta<typeof DekuAvatar>

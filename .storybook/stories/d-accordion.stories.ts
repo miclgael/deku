@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import DekuAccordion from '../../src/runtime/components/d-accordion/d-accordion.vue'
 
 const meta = {
-  title: 'DekuAccordion',
+  title: 'Accordion',
   component: DekuAccordion,
   tags: ['autodocs']
 } satisfies Meta<typeof DekuAccordion>

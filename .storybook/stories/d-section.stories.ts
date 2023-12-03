@@ -1,18 +1,32 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
 import type { Meta, StoryObj } from '@storybook/vue3'
-import DekuSection from '../../src/runtime/components/d-section/d-section.vue'
-
+import DekuSection from '../../src/runtime/components/global/d-section/d-section.vue'
+import { themes } from '../../src/runtime/components/global/d-theme/d-theme.config'
 const meta = {
-  title: 'DekuSection',
+  title: 'Section',
   component: DekuSection,
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof DekuSection>
 
 export default meta
+
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  render: (args) => ({
+  argTypes: {
+    theme: {
+      type: 'select',
+      options: Object.keys(themes)
+    },
+    element: {
+      type: 'select',
+      options: ['div', 'section', 'article', 'aside', 'header', 'footer', 'main']
+    },
+    useContainer: {
+      type: 'boolean'
+    }
+  },
+  render: (args, { argTypes }) => ({
     components: { DekuSection },
     setup() {
       return { args }
