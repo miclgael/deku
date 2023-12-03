@@ -6,7 +6,13 @@ import DekuAvatar from '../../src/runtime/components/d-avatar/d-avatar.vue'
 const meta = {
   title: 'Avatar',
   component: DekuAvatar,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  argTypes: {
+    size: {
+      type: 'select',
+      options: ['sm', 'md', 'lg']
+    }
+  }
 } satisfies Meta<typeof DekuAvatar>
 
 export default meta
@@ -21,7 +27,8 @@ export const Default: Story = {
     template: '<DekuAvatar v-bind="args" />'
   }),
   args: {
-    src: 'https://picsum.photos/seed/picsum/800/600',
+    src: 'https://picsum.photos/seed/picsum/400/400',
     alt: 'Random image from picsum.photos',
+    size: 'md'
   }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   src: {
     type: String,
     required: true
@@ -7,16 +7,28 @@ const props = defineProps({
   alt: {
     type: String,
     required: true
+  },
+  size: {
+    type: String,
+    default: 'md',
+    validator: (value: string) => ['sm', 'md', 'lg'].includes(value)
   }
 })
 </script>
 
 <template>
-  <figure class="d-avatar">
+  <figure
+    class="d-avatar"
+    :style="{
+      width: size === 'sm' ? '2rem' : size === 'md' ? '3.5rem' : '5rem',
+      height: size === 'sm' ? '2rem' : size === 'md' ? '3.5rem' : '5rem'
+    }"
+  >
     <img
       class="d-avatar__img"
       :src="src"
       :alt="alt"
+      loading="lazy"
     >
   </figure>
 </template>
