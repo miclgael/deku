@@ -1,7 +1,7 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
 
 import type { Meta, StoryObj } from '@storybook/vue3'
-import DekuAccordion from '../../src/runtime/components/d-accordion/d-accordion.vue'
+import DekuAccordion from './d-accordion.vue'
 
 const meta = {
   title: 'Accordion',
@@ -18,6 +18,10 @@ export const Default: Story = {
     setup() {
       return { args }
     },
-    template: '<DekuAccordion v-bind="args"><template #summary>Test</template>Accordion!</DekuAccordion>'
+    template: `
+      <DekuAccordion v-bind="args">
+        <template #summary>Test</template>
+        <p>Accordion!</p>
+      </DekuAccordion>`
   })
 }

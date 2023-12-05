@@ -19,7 +19,7 @@
   /* dark-mode */
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-primary: #007bff;
+      --color-primary: #0d6efd;
       --color-secondary: #6c757d;
       --color-tertiary: #6c757d;
       --color-info: #17a2b8;

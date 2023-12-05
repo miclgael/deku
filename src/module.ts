@@ -47,12 +47,12 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.useComponents) {
       const components = [
         {
-          name: 'DekuTest',
-          filePath: resolve('runtime/components/deku-test.vue'),
+          name: 'DekuTheme',
+          filePath: resolve('runtime/components/global/d-theme/d-theme.vue')
         },
         {
           name: 'DekuSection',
-          filePath: resolve('runtime/components/d-section/d-section.vue')
+          filePath: resolve('runtime/components/global/d-section/d-section.vue')
         },
         {
           name: 'DekuAccordion',
@@ -69,10 +69,22 @@ export default defineNuxtModule<ModuleOptions>({
         {
           name: 'DekuDrawer',
           filePath: resolve('runtime/components/d-drawer/d-drawer.vue')
+        },
+        {
+          name: 'DekuGrid',
+          filePath: resolve('runtime/components/d-grid/d-grid.vue')
         }
       ]
 
+      // Register the components with prefix `Deku`.
       components.forEach((component) => addComponent(component))
+
+      // Also register the components with prefix `C` for backward compatibility with Chia.
+      components.forEach((component) => addComponent({
+        name: `${component.name.replace('Deku', 'C')}`,
+        filePath: component.filePath
+      }))
+
     }
   }
 })

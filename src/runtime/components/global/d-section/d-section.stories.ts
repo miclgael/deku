@@ -1,9 +1,11 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
-import type { Meta, StoryObj } from '@storybook/vue3'
-import DekuSection from '../../src/runtime/components/global/d-section/d-section.vue'
-import { themes } from '../../src/runtime/components/global/d-theme/d-theme.config'
+import type { Meta, StoryObj, Args } from '@storybook/vue3'
+import DekuSection from './d-section.vue'
+
+import { themes } from '../d-theme/d-theme.config.js'
+
 const meta = {
-  title: 'Section',
+  title: 'global/Section',
   component: DekuSection,
   tags: ['autodocs'],
 } satisfies Meta<typeof DekuSection>
@@ -15,11 +17,11 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   argTypes: {
     theme: {
-      type: 'select',
+      type: 'select' as Args['theme'],
       options: Object.keys(themes)
     },
     element: {
-      type: 'select',
+      type: 'select' as Args['element'],
       options: ['div', 'section', 'article', 'aside', 'header', 'footer', 'main']
     },
     useContainer: {

@@ -1,14 +1,15 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
-import type { Meta, StoryObj } from '@storybook/vue3'
-import DekuTheme from '../../src/runtime/components/global/d-theme/d-theme.vue'
-import { themes } from '../../src/runtime/components/global/d-theme/d-theme.config'
+import type { Meta, StoryObj, Args } from '@storybook/vue3'
+import DekuTheme from './d-theme.vue'
+import { themes } from './d-theme.config.js'
+
 const meta = {
-  title: 'Theme',
+  title: 'global/Theme',
   component: DekuTheme,
   tags: ['autodocs'],
   argTypes: {
     theme: {
-      type: 'select',
+      type: 'select' as Args['theme'],
       options: Object.keys(themes)
     }
   }

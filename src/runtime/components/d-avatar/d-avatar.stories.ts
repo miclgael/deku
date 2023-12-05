@@ -1,7 +1,7 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
 
-import type { Meta, StoryObj } from '@storybook/vue3'
-import DekuAvatar from '../../src/runtime/components/d-avatar/d-avatar.vue'
+import type { Meta, StoryObj, Args } from '@storybook/vue3'
+import DekuAvatar from './d-avatar.vue'
 
 const meta = {
   title: 'Avatar',
@@ -9,7 +9,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: {
-      type: 'select',
+      type: 'select' as Args['size'],
       options: ['sm', 'md', 'lg']
     }
   }
