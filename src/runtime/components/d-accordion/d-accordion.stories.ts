@@ -10,6 +10,7 @@ const meta = {
   argTypes: {
     borderColor: {
       type: 'select' as Args['borderColor'],
+      // Excluding low contrast items
       options: exclude(['gray-1', 'gray-2', 'white'], themes)
     }
   }
