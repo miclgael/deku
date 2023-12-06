@@ -46,33 +46,45 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (options.useComponents) {
       const components = [
+        // New
         {
           name: 'DekuTheme',
           filePath: resolve('runtime/components/global/d-theme/d-theme.vue')
         },
+        // Rewritten, based on Chia
         {
           name: 'DekuSection',
           filePath: resolve('runtime/components/global/d-section/d-section.vue')
         },
+        // Ported from Chia
+        {
+          name: 'DekuGrid',
+          filePath: resolve('runtime/components/global/d-grid/d-grid.vue')
+        },
+        // Ported from Chia
+        {
+          name: 'DekuGridCell',
+          filePath: resolve('runtime/components/global/d-grid/d-grid-cell.vue')
+        },
+        // New
         {
           name: 'DekuAccordion',
           filePath: resolve('runtime/components/d-accordion/d-accordion.vue')
         },
+        // New
         {
           name: 'DekuAlert',
           filePath: resolve('runtime/components/d-alert/d-alert.vue')
         },
+        // New
         {
           name: 'DekuAvatar',
           filePath: resolve('runtime/components/d-avatar/d-avatar.vue')
         },
+        // New
         {
           name: 'DekuDrawer',
           filePath: resolve('runtime/components/d-drawer/d-drawer.vue')
-        },
-        {
-          name: 'DekuGrid',
-          filePath: resolve('runtime/components/d-grid/d-grid.vue')
         }
       ]
 

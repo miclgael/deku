@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+// @ts-ignore-next-line
+import { levels } from './d-alert.config'
+// @ts-ignore-next-line
+import type { Level } from './d-alert.config'
 
 const props = defineProps({
   level: {
     type: String,
     default: 'info',
     validator: (value: string) => {
-      return [
-        'info',
-        'warning',
-        'error',
-        'success',
-      ].includes(value)
+      return levels?.includes(value as Level)
     }
   },
 })
@@ -25,29 +24,27 @@ const dismissAlert = () => {
 </script>
 
 <template>
-  <teleport to="body">
-    <dialog
-      :open="isVisible"
-      class="deku-alert"
-      :class="alertLevel"
-      aria-labelledby="dialog-title"
-      aria-describedby="dialog-description"
-    >
-      <slot
-        id="dialog-title"
-        name="title"
-      />
-      <slot id="dialog-description" />
-      <form method="dialog">
-        <button
-          class="deku-alert__dismiss"
-          @click="dismissAlert"
-        >
-          Close
-        </button>
-      </form>
-    </dialog>
-  </teleport>
+  <dialog
+    :open="isVisible"
+    class="deku-alert"
+    :class="alertLevel"
+    aria-labelledby="dialog-title"
+    aria-describedby="dialog-description"
+  >
+    <slot
+      id="dialog-title"
+      name="title"
+    />
+    <slot id="dialog-description" />
+    <form method="dialog">
+      <button
+        class="deku-alert__dismiss"
+        @click="dismissAlert"
+      >
+        Close
+      </button>
+    </form>
+  </dialog>
 </template>
 
 <style>

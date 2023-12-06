@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { themes } from './d-theme.config.js'
+// @ts-ignore-next-line
+import { themes } from './d-theme.config'
+
 defineProps({
   theme: {
     type: String,

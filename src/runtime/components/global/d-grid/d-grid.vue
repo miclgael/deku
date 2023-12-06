@@ -8,7 +8,8 @@
 </template>
 
 <script setup>
-import { alignOptions, justifyOptions } from './d-grid.config.js'
+// @ts-ignore-next-line
+import { alignOptions, justifyOptions } from './d-grid.config'
 
 defineProps({
   /**

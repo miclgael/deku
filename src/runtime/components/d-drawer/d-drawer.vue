@@ -21,11 +21,6 @@ const handleKeydown = (event: KeyboardEvent) => {
 const opener = ref<HTMLElement | null>(null)
 const drawer = ref<HTMLElement | null>(null)
 
-const handleOpen = () => {
-  console.log($refs.drawer)
-  $refs.drawer?.focus()
-}
-
 onMounted(() => {
   document?.addEventListener('keydown', handleKeydown)
   opener.value = document?.activeElement as HTMLElement

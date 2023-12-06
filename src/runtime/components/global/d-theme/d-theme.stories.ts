@@ -1,7 +1,9 @@
 // https://storybook.js.org/docs/vue/writing-stories/introduction
 import type { Meta, StoryObj, Args } from '@storybook/vue3'
 import DekuTheme from './d-theme.vue'
-import { themes } from './d-theme.config.js'
+
+// @ts-ignore-next-line
+import { themes } from './d-theme.config'
 
 const meta = {
   title: 'Deku/Global/Theme',
@@ -27,6 +29,6 @@ export const Default: Story = {
     template: '<DekuTheme v-bind="args">Theme!</DekuTheme>',
   }),
   args: {
-    theme: 'gray-1'
+    theme: 'primary'
   }
 }

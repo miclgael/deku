@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { themes, exclude } from '../global/d-theme/d-theme.config.js'
+// @ts-ignore-next-line
+import { themes, exclude } from '../global/d-theme/d-theme.config'
 const props = defineProps({
   borderColor: {
     type: String,

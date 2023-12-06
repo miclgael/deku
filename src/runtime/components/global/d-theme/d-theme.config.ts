@@ -1,11 +1,11 @@
-type Theme = {
+export type Theme = {
   [key: string]: {
     backgroundColor: string
     color: string
   }
 }
 
-type ThemeName = keyof Theme
+export type ThemeName = keyof Theme
 
 export const themes: Theme = {
   'gray-1': {

@@ -2,7 +2,8 @@
 import type { Meta, StoryObj, Args } from '@storybook/vue3'
 import DekuSection from './d-section.vue'
 
-import { themes } from '../d-theme/d-theme.config.js'
+// @ts-ignore-next-line
+import { themes } from '../d-theme/d-theme.config'
 
 const meta = {
   title: 'Deku/Global/Section',
@@ -28,6 +29,7 @@ export const Default: Story = {
       type: 'boolean'
     }
   },
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   render: (args, { argTypes }) => ({
     components: { DekuSection },
     setup() {

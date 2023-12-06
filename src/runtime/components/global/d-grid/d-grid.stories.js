@@ -1,7 +1,7 @@
 import CGrid from './d-grid.vue'
 import CGridCell from './d-grid-cell.vue'
 
-import { alignOptions, justifyOptions } from './d-grid.config.js'
+import { alignOptions, justifyOptions } from './d-grid.config'
 
 /**
  * Boilerplate for the component

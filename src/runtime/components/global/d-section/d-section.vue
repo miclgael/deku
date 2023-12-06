@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore-next-line
 import { themes } from '../d-theme/d-theme.config'
 import DekuTheme from '../d-theme/d-theme.vue'
 
