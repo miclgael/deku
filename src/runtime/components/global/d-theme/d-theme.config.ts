@@ -5,6 +5,8 @@ type Theme = {
   }
 }
 
+type ThemeName = keyof Theme
+
 export const themes: Theme = {
   'gray-1': {
     backgroundColor: 'var(--color-gray-1)',
@@ -59,3 +61,6 @@ export const themes: Theme = {
     color: 'var(--color-white)',
   },
 }
+
+export const exclude = (names: ThemeName[], themes: Theme) =>
+  Object.keys(themes)?.filter(name => !names?.includes(name))

@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { themes } from '../global/d-theme/d-theme.config.js'
+import { themes, exclude } from '../global/d-theme/d-theme.config.js'
 const props = defineProps({
   borderColor: {
     type: String,
     default: null,
     validator: (value: string) => {
-      return Object.prototype.hasOwnProperty.call(themes, value);
+      return Object.prototype.hasOwnProperty.call(
+        exclude(['gray-1','gray-2', 'white'], themes)
+      , value);
     }
   }
 })
@@ -35,10 +37,14 @@ const props = defineProps({
 
 @layer theme {
   details {
-    border: 1px solid #ccc;
+    /* defaults */
+    border: 1px solid black;
     border-left: 4px solid black;
+
+    /* overrides */
+    border: 1px solid v-bind(themes[props.borderColor].backgroundColor);
     border-left: 4px solid v-bind(themes[props.borderColor].backgroundColor);
-    background-color: color-mix(in srgb, v-bind(themes[props.borderColor].backgroundColor) 20%, white);
+    background-color: color-mix(in srgb, v-bind(themes[props.borderColor].backgroundColor) 5%, white);
   }
 }
 
