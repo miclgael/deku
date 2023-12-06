@@ -4,7 +4,7 @@ import DekuTheme from './d-theme.vue'
 import { themes } from './d-theme.config.js'
 
 const meta = {
-  title: 'global/Theme',
+  title: 'Deku/Global/Theme',
   component: DekuTheme,
   tags: ['autodocs'],
   argTypes: {

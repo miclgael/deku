@@ -7,7 +7,7 @@ import { alignOptions, justifyOptions } from './d-grid.config.js'
  * Boilerplate for the component
  */
 export default {
-  title: 'global/Grid',
+  title: 'Deku/Global/Grid',
   component: CGrid,
   argTypes: {
     minimumColumnWidth: { control: { type: 'number', min: 8, max: 32 } },

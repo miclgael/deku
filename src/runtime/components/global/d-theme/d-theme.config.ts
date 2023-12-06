@@ -1,4 +1,11 @@
-export const themes = {
+type Theme = {
+  [key: string]: {
+    backgroundColor: string
+    color: string
+  }
+}
+
+export const themes: Theme = {
   'gray-1': {
     backgroundColor: 'var(--color-gray-1)',
     color: 'var(--color-black)',

@@ -5,7 +5,7 @@ import DekuSection from './d-section.vue'
 import { themes } from '../d-theme/d-theme.config.js'
 
 const meta = {
-  title: 'global/Section',
+  title: 'Deku/Global/Section',
   component: DekuSection,
   tags: ['autodocs'],
 } satisfies Meta<typeof DekuSection>
