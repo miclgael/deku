@@ -4,7 +4,7 @@ import type { Meta, StoryObj, Args } from '@storybook/vue3'
 import DekuAccordion from './d-accordion.vue'
 
 // @ts-ignore-next-line
-import { themes, exclude } from '../global/d-theme/d-theme.config'
+import { themes, exclude } from '../../global/d-theme/d-theme.config'
 
 const meta = {
   title: 'Deku/Atoms/Accordion',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // @ts-ignore-next-line
-import { themes, exclude } from '../global/d-theme/d-theme.config'
+import { themes, exclude } from '../../global/d-theme/d-theme.config'
 const props = defineProps({
   borderColor: {
     type: String,
@@ -43,9 +43,9 @@ const props = defineProps({
     border-left: 4px solid black;
 
     /* overrides */
-    border: 1px solid v-bind(themes[props.borderColor].backgroundColor);
-    border-left: 4px solid v-bind(themes[props.borderColor].backgroundColor);
-    background-color: color-mix(in srgb, v-bind(themes[props.borderColor].backgroundColor) 5%, white);
+    border: 1px solid v-bind(themes?.[props?.borderColor]?.backgroundColor || 'black');
+    border-left: 4px solid v-bind(themes?.[props.borderColor]?.backgroundColor || 'black');
+    background-color: color-mix(in srgb, v-bind(themes?.[props?.borderColor]?.backgroundColor || 'black') 5%, white);
   }
 }
 

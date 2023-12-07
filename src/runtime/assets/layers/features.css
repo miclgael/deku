@@ -1,2 +1,11 @@
 /* What you might also want to call, "components" */
-@layer features {}
+@layer features {
+  :root {
+    --form-element-spacing-vertical: 0.5rem;
+    --form-element-spacing-horizontal: 1rem;
+  }
+
+  .button {
+    padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  }
+}

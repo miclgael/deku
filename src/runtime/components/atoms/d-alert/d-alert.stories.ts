@@ -4,7 +4,7 @@ import type { Meta, StoryObj, Args } from '@storybook/vue3'
 import DekuAlert from './d-alert.vue'
 
 // @ts-ignore-next-line
-import { levels } from './d-alert.config'
+import { levels } from './d-alert.config.js'
 
 const meta = {
   title: 'Deku/Atoms/Alert',
