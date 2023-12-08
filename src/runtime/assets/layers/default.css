@@ -46,9 +46,8 @@
   }
 
   :root {
-    --color-scheme: light dark;
-    --color-primary: blue;
-    --color-visited: purple;
-    --color-active: green;
+    --primary: blue;
+    --visited: purple;
+    --active: red;
   }
 }

@@ -42,19 +42,20 @@ WithAbsoluteToProp.args = {
 
 export const ColorIsPrimary = Template.bind({})
 ColorIsPrimary.args = {
-  color: config.colorOptions.at(0),
+  theme: config.colorOptions.at(0),
   default: 'Button, primary color'
 }
 
 export const ColorIsSecondary = Template.bind({})
 ColorIsSecondary.args = {
-  color: config.colorOptions.at(1),
+  theme: config.colorOptions.at(1),
   default: 'Button, secondary color',
 }
 
 export const ColorIsContrast = Template.bind({})
 ColorIsContrast.args = {
-  color: config.colorOptions.at(2),
+  theme: config.colorOptions.at(0),
+  variant: 'contrast',
   default: 'Button, high contrast color',
 }
 

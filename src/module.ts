@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -123,5 +123,11 @@ export default defineNuxtModule<ModuleOptions>({
       }))
 
     }
+
+    addImports({
+      name: 'useStyleLayers',
+      as: 'useStyleLayers',
+      from: resolve('runtime/composables/useStyleLayers')
+    })
   }
 })

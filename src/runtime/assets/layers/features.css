@@ -2,10 +2,44 @@
 @layer features {
   :root {
     --form-element-spacing-vertical: 0.5rem;
-    --form-element-spacing-horizontal: 1rem;
+    --form-element-spacing-horizontal: 0.5rem;
+    --form-element-radius: 0.25rem;
   }
 
+  /* Buttons */
   .button {
     padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+    text-align: center;
+    border-radius: var(--form-element-radius);
+  }
+
+  .button--primary {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  .button--secondary {
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  .button--outline {
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+  }
+
+  .button--contrast {
+    filter: contrast(200%);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Navigation */
+  nav li :where(a, [role="link"]) {
+    padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+    color: var(--black);
+    border-radius: var(--form-element-radius);
   }
 }

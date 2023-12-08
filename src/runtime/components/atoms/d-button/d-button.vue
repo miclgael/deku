@@ -1,6 +1,6 @@
 
 <script setup>
-import { colorOptions } from './d-button.config.js'
+import { colorOptions } from './d-button.config'
 const props = defineProps({
   /**
    * The presence of the `to` prop, will output an `nuxt-link`, or `a` tag, depending on its contents.
@@ -35,7 +35,7 @@ const props = defineProps({
   variant: {
     type: String,
     default: null,
-    validator: (value) => ['outline'].includes(value)
+    validator: (value) => ['outline', 'contrast'].includes(value)
   }
 })
 
@@ -89,7 +89,11 @@ const linkProps = (props) => {
   <component
     :is="buttonType($props)"
     v-bind="linkProps($props)"
-    :class="[buttonType($props) !== 'a' ? 'button' : 'hyperlink', $props.color, $props.variant]"
+    :class="[
+      $props.theme || buttonType($props) !== 'a' ? 'button' : 'hyperlink',
+      $props.theme ? `button--${$props.theme}` : null,
+      $props.variant ? `button--${$props.variant}` : null
+    ]"
     :role="buttonType($props) !== 'a' ? 'button' : null"
   >
     <slot />
