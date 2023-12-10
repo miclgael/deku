@@ -2,7 +2,7 @@
   "name": "deku-ui",
   "version": "1.0.0",
   "description": "Nuxt module with just the basics",
-  "repository": "your-org/deku-ui",
+  "repository": "miclgael/deku",
   "license": "MIT",
   "type": "module",
   "exports": {
