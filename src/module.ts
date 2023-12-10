@@ -1,11 +1,10 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addComponent, addImportsDir } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   useBaseStyles: boolean
   usePlugins: boolean
   useComponents: boolean
-  useMeta: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -18,8 +17,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     useBaseStyles: true,
     usePlugins: true,
-    useComponents: true,
-    useMeta: true
+    useComponents: true
   },
 
   setup(options, nuxt) {
@@ -30,13 +28,6 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.css.push(
         resolve('runtime/assets/main.css')
       )
-    }
-
-    if (options.useMeta) {
-      nuxt.options.app.head.bodyAttrs = {
-        ...nuxt.options.app.head.bodyAttrs,
-        'data-theme': 'light'
-      }
     }
 
     if (options.usePlugins) {
@@ -124,10 +115,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     }
 
-    addImports({
-      name: 'useStyleLayers',
-      as: 'useStyleLayers',
-      from: resolve('runtime/composables/useStyleLayers')
-    })
+    addImportsDir(resolve('runtime/composables'))
   }
 })

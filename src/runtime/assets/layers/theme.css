@@ -16,6 +16,11 @@
     --gray-3: #d6d6d6;
     --black: #000000;
     --white: #ffffff;
+
+    --always-dark: #000000;
+    --always-light: #ffffff;
+
+    --code-background: #f5f5f5;
   }
 
   /* dark-mode */
@@ -36,6 +41,8 @@
       --gray-3: #d6d6d6;
       --black: #000000;
       --white: #ffffff;
+
+      --code-background: #1a1f28;
     }
   }
 
@@ -57,6 +64,8 @@
       --gray-3: #d6d6d6;
       --black: #000000;
       --white: #ffffff;
+
+      --code-background: #f5f5f5;
     }
   }
 
@@ -78,6 +87,8 @@
       --gray-3: #d6d6d6;
       --black: #000000;
       --white: #ffffff;
+
+      --code-background: #000000;
     }
   }
 

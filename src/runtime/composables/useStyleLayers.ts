@@ -1,10 +1,10 @@
-export const useStyleLayers = () => {
+export const useStyleLayers = (name: string[]) => {
   return (
     useHead({
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'
+          href: import(`../assets/layers/${name}.css`)
         }
       ]
     })

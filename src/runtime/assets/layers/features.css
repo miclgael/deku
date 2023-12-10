@@ -42,4 +42,11 @@
     color: var(--black);
     border-radius: var(--form-element-radius);
   }
+
+  /* Markup - code */
+  code, kbd, pre {
+    background: var(--code-background);
+    padding: var(--form-element-spacing-vertical) calc(var(--form-element-spacing-horizontal) * 3);
+    overflow-y: scroll;
+  }
 }

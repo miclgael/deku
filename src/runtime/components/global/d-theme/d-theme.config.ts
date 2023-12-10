@@ -60,6 +60,10 @@ export const themes: Theme = {
     backgroundColor: 'var(--danger)',
     color: 'var(--white)',
   },
+  'invert': {
+    backgroundColor: 'var(--always-dark)',
+    color: 'var(--always-light)',
+  },
 }
 
 export const exclude = (names: ThemeName[], themes: Theme) =>
