@@ -1,3 +1,3 @@
 <template>
-  <deku-test />
+  <deku-button>Test</deku-button>
 </template>
