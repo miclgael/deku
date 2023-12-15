@@ -27,6 +27,13 @@ defineProps({
     validator: (value: string) => {
       return Object.prototype.hasOwnProperty.call(themes, value)
     }
+  },
+  /**
+   * Use narrow width
+   */
+  narrow: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -39,7 +46,10 @@ defineProps({
     <deku-theme :theme="theme">
       <div
         v-if="useContainer"
-        class="section__inside"
+        :class="{
+          'section__inside': true,
+          'section__inside--narrow': narrow
+        }"
       >
         <slot />
       </div>
@@ -65,6 +75,9 @@ defineProps({
     @media (min-width: 768px) {
       padding: 2rem 3rem;
     }
+  }
+  .section__inside--narrow {
+    max-width: 80ch;
   }
 }
 </style>
