@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add narrow mode to section ([8565e65](https://github.com/miclgael/deku/commit/8565e65))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.2.0
 
 
