@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- Add disable mode to theme ([3f880dc](https://github.com/miclgael/deku/commit/3f880dc))
+
+### 🏡 Chore
+
+- **release:** V1.4.0 ([21d7851](https://github.com/miclgael/deku/commit/21d7851))
+
+### 🎨 Styles
+
+- Delete log ([df9ba92](https://github.com/miclgael/deku/commit/df9ba92))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.4.0
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.3.0...v1.4.0)
