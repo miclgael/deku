@@ -64,6 +64,10 @@ export const themes: Theme = {
     backgroundColor: 'var(--always-dark)',
     color: 'var(--always-light)',
   },
+  'disable': {
+    backgroundColor: 'inherit',
+    color: 'inherit',
+  }
 }
 
 export const exclude = (names: ThemeName[], themes: Theme) =>
