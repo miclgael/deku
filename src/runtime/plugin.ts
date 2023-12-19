@@ -9,8 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const dekuPlugin = (options: DekuPluginOptions) => `Hello ${options.message}!`
 
   nuxtApp.provide('deku', dekuPlugin)
-
-  if (process.server) {
-    console.info('Deku plugin was provided to nuxt app.')
-  }
+  // if (process.server) {
+  //   console.info('Deku plugin was provided to nuxt app.')
+  // }
 })
