@@ -42,7 +42,7 @@ export const themes: Theme = {
   },
   'info': {
     backgroundColor: 'var(--info)',
-    color: 'var(--white)',
+    color: 'var(--black)',
   },
   'success': {
     backgroundColor: 'var(--success)',
