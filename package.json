@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.8.2",
+    "@storybook/addon-a11y": "^7.6.6",
     "npm-watch": "^0.11.0"
   },
   "devDependencies": {
@@ -53,6 +54,7 @@
     "@storybook/addon-essentials": "7.5.3",
     "@storybook/addon-interactions": "7.5.3",
     "@storybook/addon-links": "7.5.3",
+    "@storybook/addon-themes": "^7.6.6",
     "@storybook/blocks": "7.5.3",
     "@storybook/builder-vite": "7.5.3",
     "@storybook/testing-library": "^0.2.0",

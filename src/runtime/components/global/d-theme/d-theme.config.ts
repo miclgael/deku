@@ -42,11 +42,11 @@ export const themes: Theme = {
   },
   'info': {
     backgroundColor: 'var(--info)',
-    color: 'var(--black)',
+    color: 'var(--color-always-dark)',
   },
   'success': {
     backgroundColor: 'var(--success)',
-    color: 'var(--white)',
+    color: 'var(--black)',
   },
   'warning': {
     backgroundColor: 'var(--warning)',

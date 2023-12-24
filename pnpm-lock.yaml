@@ -8,6 +8,9 @@ dependencies:
   '@nuxt/kit':
     specifier: ^3.8.2
     version: 3.8.2(rollup@3.29.4)
+  '@storybook/addon-a11y':
+    specifier: ^7.6.6
+    version: 7.6.6
   npm-watch:
     specifier: ^0.11.0
     version: 0.11.0
@@ -43,6 +46,9 @@ devDependencies:
   '@storybook/addon-links':
     specifier: 7.5.3
     version: 7.5.3(react-dom@18.2.0)(react@18.2.0)
+  '@storybook/addon-themes':
+    specifier: ^7.6.6
+    version: 7.6.6
   '@storybook/blocks':
     specifier: 7.5.3
     version: 7.5.3(react-dom@18.2.0)(react@18.2.0)
@@ -2223,10 +2229,10 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/devtools-kit@1.0.5(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0):
-    resolution: {integrity: sha512-2SbsYZngD0r6nZCXhEKQ8E6sc10uaYMiN3VicoHj0fZSXNEYjJjLRQ3xD+hbmiqM4dRMGeR06IU6E/Ff0asDcQ==}
+  /@nuxt/devtools-kit@1.0.6(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0):
+    resolution: {integrity: sha512-CUSE++NRTIwvBWbLsPzLZIDMpXr6oyllaWm8tOR3Wgr/04jW31uyWbXjU/fxRuDotQwZfcTe19uunRoCoBnk1Q==}
     peerDependencies:
-      nuxt: ^3.8.1
+      nuxt: ^3.8.2
       vite: '*'
     dependencies:
       '@nuxt/kit': 3.8.2(rollup@3.29.4)
@@ -2700,7 +2706,7 @@ packages:
   /@nuxtjs/storybook@7.0.0(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0):
     resolution: {integrity: sha512-h/ZYc8kqgaij5DCBy39Cc6HzRYRVEbakYbf4iCQoWlvDE+E1RssGpXlGNXXh+FIaFhTIEh/dff7JgxXZUASX+w==}
     dependencies:
-      '@nuxt/devtools-kit': 1.0.5(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)
+      '@nuxt/devtools-kit': 1.0.6(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)
       '@nuxt/kit': 3.7.3(rollup@3.29.4)
       chalk: 5.3.0
       defu: 6.1.3
@@ -3806,6 +3812,13 @@ packages:
       - vue-tsc
     dev: true
 
+  /@storybook/addon-a11y@7.6.6:
+    resolution: {integrity: sha512-D7TlxmPB4qoqN1q1WoVvRCIAB6RhDN7s0JL4qvznK3cdDDkQyfk3zvip97NhbT5ZSLjpszyElV9CfWht1O341w==}
+    dependencies:
+      '@storybook/addon-highlight': 7.6.6
+      axe-core: 4.8.3
+    dev: false
+
   /@storybook/addon-actions@7.5.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-v3yL6Eq/jCiXfA24JjRdbEQUuorms6tmrywaKcd1tAy4Ftgof0KHB4tTcTyiajrI5bh6PVJoRBkE8IDqmNAHkA==}
     peerDependencies:
@@ -3971,6 +3984,12 @@ packages:
       '@storybook/preview-api': 7.5.3
     dev: true
 
+  /@storybook/addon-highlight@7.6.6:
+    resolution: {integrity: sha512-B85UaCts2uMpa0yHBSnupzy2WCdW4vfB+lfaBug9beyOyZQdel07BumblE0KwSJftYgdCNPUZ5MRlqEDzMLTWQ==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: false
+
   /@storybook/addon-interactions@7.5.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-gD3cU8sYSM/mdbA9ooYIb4c689JkDsJbZ17vfYJ5RjNkSmqKehybdpZOfkj27sVIyFtmscSi75t+pzK4Pv4rZw==}
     peerDependencies:
@@ -4079,6 +4098,12 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
+    dev: true
+
+  /@storybook/addon-themes@7.6.6:
+    resolution: {integrity: sha512-wlYXmFd/NtgAx08qulJIBUdF5II/iXKfs41J/h3q+aepVpC8n1+EkdqS5S4iwAW0dlb316I9Aqfy1gUdext4kQ==}
+    dependencies:
+      ts-dedent: 2.2.0
     dev: true
 
   /@storybook/addon-toolbars@7.5.3(react-dom@18.2.0)(react@18.2.0):
@@ -4704,7 +4729,6 @@ packages:
 
   /@storybook/global@5.0.0:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
-    dev: true
 
   /@storybook/instrumenter@7.5.3:
     resolution: {integrity: sha512-p6b+/6ohTCKxWn00bXT8KBqVjXUOxeILnJtLlG83USLQCpI+XVkpmK57HYuydqEwy/1XjG+4S4ntPk9VVz3u7w==}
@@ -4948,7 +4972,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.9(typescript@5.3.2)
-      vue-component-type-helpers: 1.8.25
+      vue-component-type-helpers: 1.8.26
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -4971,7 +4995,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.9(typescript@5.3.2)
-      vue-component-type-helpers: 1.8.25
+      vue-component-type-helpers: 1.8.26
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -6138,6 +6162,11 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /axe-core@4.8.3:
+    resolution: {integrity: sha512-d5ZQHPSPkF9Tw+yfyDcRoUOc4g/8UloJJe5J8m4L5+c7AtDdjDLRxew/knnI4CxvtdxEUVgWz4x3OIQUIFiMfw==}
+    engines: {node: '>=4'}
+    dev: false
 
   /b4a@1.6.4:
     resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
@@ -12985,8 +13014,8 @@ packages:
       ufo: 1.3.2
     dev: true
 
-  /vue-component-type-helpers@1.8.25:
-    resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
+  /vue-component-type-helpers@1.8.26:
+    resolution: {integrity: sha512-CIwb7s8cqUuPpHDk+0DY8EJ/x8tzdzqw8ycX8hhw1GnbngTgSsIceHAqrrLjmv8zXi+j5XaiqYRQMw8sKyyjkw==}
     dev: true
 
   /vue-devtools-stub@0.1.0:
