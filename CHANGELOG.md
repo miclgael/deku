@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.5.2
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.5.1...v1.5.2)
+
+### 🩹 Fixes
+
+- **a11y:** Theme issue. contributes to miclgael/issues#5 ([#5](https://github.com/miclgael/deku/issues/5))
+
+### 🏡 Chore
+
+- **release:** V1.5.1 ([a717c95](https://github.com/miclgael/deku/commit/a717c95))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.5.1
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.5.0...v1.5.1)
