@@ -3,7 +3,7 @@
 import { themes } from '../d-theme/d-theme.config'
 import DekuTheme from '../d-theme/d-theme.vue'
 
-defineProps({
+const props = defineProps({
   /**
    * Type of element to be used (e.g. section, main, footer, header, etc.)
    */
@@ -15,6 +15,13 @@ defineProps({
    * Treat the section as a container element
    */
   useContainer: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * Use vertical spacing
+   */
+  useVerticalSpacing: {
     type: Boolean,
     default: true
   },
@@ -36,6 +43,9 @@ defineProps({
     default: false
   }
 })
+
+const vSpacing = props.useVerticalSpacing ? '.75rem 1.25rem' : '0 1.25rem'
+const vSpacingWide = props.useVerticalSpacing ? '2rem 3rem' : '0 3rem'
 </script>
 
 <template>
@@ -70,10 +80,10 @@ defineProps({
     position: relative;
     max-width: 94rem;
     margin: 0 auto;
-    padding: .75rem 1.25rem;
+    padding: v-bind(vSpacing);
 
     @media (min-width: 768px) {
-      padding: 2rem 3rem;
+      padding: v-bind(vSpacingWide);
     }
   }
   .section__inside--narrow {
