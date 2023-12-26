@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.5.2...v1.6.0)
+
+### 🚀 Enhancements
+
+- Add verticalspace prop to section ([fb9f6fb](https://github.com/miclgael/deku/commit/fb9f6fb))
+
+### 🏡 Chore
+
+- **release:** V1.5.2 ([438a86a](https://github.com/miclgael/deku/commit/438a86a))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.5.2
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.5.1...v1.5.2)
