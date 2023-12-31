@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.6.2
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.6.0...v1.6.2)
+
+### 🏡 Chore
+
+- **release:** V1.6.0 ([31ad381](https://github.com/miclgael/deku/commit/31ad381))
+- **release:** V1.6.1 ([433ac7c](https://github.com/miclgael/deku/commit/433ac7c))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.6.1
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.6.0...v1.6.1)
