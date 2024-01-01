@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.6.2...v1.7.0)
+
+### 🚀 Enhancements
+
+- Add a gray level 4 to themes ([848fc20](https://github.com/miclgael/deku/commit/848fc20))
+
+### 🏡 Chore
+
+- **release:** V1.6.2 ([2a2edaa](https://github.com/miclgael/deku/commit/2a2edaa))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.6.2
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.6.0...v1.6.2)
