@@ -20,6 +20,10 @@ export const themes: Theme = {
     backgroundColor: 'var(--gray-3)',
     color: 'var(--black)',
   },
+  'gray-4': {
+    backgroundColor: 'var(--gray-4)',
+    color: 'var(--black)',
+  },
   'black': {
     backgroundColor: 'var(--black)',
     color: 'var(--white)',

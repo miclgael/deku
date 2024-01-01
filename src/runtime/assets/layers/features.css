@@ -46,7 +46,15 @@
   /* Markup - code */
   code, kbd, pre {
     background: var(--code-background);
+  }
+  pre > code {
     padding: var(--form-element-spacing-vertical) calc(var(--form-element-spacing-horizontal) * 3);
     overflow-y: scroll;
+    border-radius: var(--form-element-radius);
+    display: block;
+  }
+  code:not(pre code) {
+    padding: 0.1375rem;
+    border-radius: var(--form-element-radius);
   }
 }

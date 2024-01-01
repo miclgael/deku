@@ -1,3 +1,22 @@
 {
-  "css.validate": false
+  "css.validate": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    ".nuxt": true,
+    ".output": true,
+    "dist": true,
+    "node_modules": true,
+    ".editorconfig": true,
+    ".eslintignore": true,
+    ".eslintrc": true,
+    ".gitignore": true,
+    ".npmrc": true,
+    ".nvmrc": true,
+    "tsconfig.json": true,
+    "CHANGELOG.md": true,
+    "playground": true
+  }
 }
