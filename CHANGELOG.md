@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.7.1
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.7.0...v1.7.1)
+
+### 🩹 Fixes
+
+- Code block sizing ([6ce34db](https://github.com/miclgael/deku/commit/6ce34db))
+
+### 🏡 Chore
+
+- **release:** V1.7.0 ([0e09e2a](https://github.com/miclgael/deku/commit/0e09e2a))
+
+### ❤️ Contributors
+
+- Michael Gale <michael@michaelgale.dev>
+
 ## v1.7.0
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.6.2...v1.7.0)
