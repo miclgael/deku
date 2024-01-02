@@ -48,7 +48,7 @@
     background: var(--code-background);
   }
   pre > code {
-    padding: var(--form-element-spacing-vertical) calc(var(--form-element-spacing-horizontal) * 3);
+    padding: var(--form-element-spacing-vertical) calc(var(--form-element-spacing-horizontal) * 2);
     overflow-y: scroll;
     border-radius: var(--form-element-radius);
     display: block;
