@@ -19,9 +19,23 @@ const props = defineProps({
     default: true
   },
   /**
+   * Treat the section as a container element
+   */
+  useTheme: {
+    type: Boolean,
+    default: true
+  },
+  /**
    * Use vertical spacing
    */
   useVerticalSpacing: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * Use horizontal spacing
+   */
+  useHorizontalSpacing: {
     type: Boolean,
     default: true
   },
@@ -44,8 +58,10 @@ const props = defineProps({
   }
 })
 
-const vSpacing = props.useVerticalSpacing ? '.75rem 1.25rem' : '0 1.25rem'
-const vSpacingWide = props.useVerticalSpacing ? '2rem 3rem' : '0 3rem'
+const vSpacingOnly = props.useVerticalSpacing ? '.75rem' : '0'
+const vSpacingOnlyWide = props.useVerticalSpacing ? '2rem' : '0'
+const hSpacingOnly = props.useHorizontalSpacing ? '1.25rem' : '1.25rem'
+const hSpacingOnlyWide = props.useHorizontalSpacing ? '3rem' : '3rem'
 </script>
 
 <template>
@@ -53,7 +69,10 @@ const vSpacingWide = props.useVerticalSpacing ? '2rem 3rem' : '0 3rem'
     :is="element"
     class="d-section"
   >
-    <deku-theme :theme="theme">
+    <deku-theme
+      v-if="useTheme"
+      :theme="theme"
+    >
       <div
         v-if="useContainer"
         :class="{
@@ -61,10 +80,27 @@ const vSpacingWide = props.useVerticalSpacing ? '2rem 3rem' : '0 3rem'
           'section__inside--narrow': narrow
         }"
       >
+        <!-- Keep theme; keep container -->
         <slot />
       </div>
+
+      <!-- Keep theme; bypass container -->
       <slot v-else />
     </deku-theme>
+
+    <!-- Bypass theme; bypass container -->
+    <slot v-else-if="!useTheme && !useContainer" />
+
+    <!-- Keep container, bypass theme -->
+    <div
+      v-else-if="useContainer && !useTheme"
+      :class="{
+        'section__inside': true,
+        'section__inside--narrow': narrow
+      }"
+    >
+      <slot />
+    </div>
   </component>
 </template>
 
@@ -80,10 +116,16 @@ const vSpacingWide = props.useVerticalSpacing ? '2rem 3rem' : '0 3rem'
     position: relative;
     max-width: 94rem;
     margin: 0 auto;
-    padding: v-bind(vSpacing);
+    padding-top: v-bind(vSpacingOnly);
+    padding-bottom: v-bind(vSpacingOnly);
+    padding-left: v-bind(hSpacingOnly);
+    padding-right: v-bind(hSpacingOnly);
 
     @media (min-width: 768px) {
-      padding: v-bind(vSpacingWide);
+      padding-top: v-bind(vSpacingOnlyWide);
+      padding-bottom: v-bind(vSpacingOnlyWide);
+      padding-left: v-bind(hSpacingOnlyWide);
+      padding-right: v-bind(hSpacingOnlyWide);
     }
   }
   .section__inside--narrow {
