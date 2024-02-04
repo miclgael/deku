@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.8.0
+
+[compare changes](https://github.com/miclgael/deku/compare/v1.7.1...v1.8.0)
+
+### 🚀 Enhancements
+
+- Add useTheme prop to make theme bypassable. ([762d582](https://github.com/miclgael/deku/commit/762d582))
+
+### 🏡 Chore
+
+- **release:** V1.7.1 ([af4c1cc](https://github.com/miclgael/deku/commit/af4c1cc))
+
+### ❤️ Contributors
+
+- Michael Gale ([@miclgael](http://github.com/miclgael))
+
 ## v1.7.1
 
 [compare changes](https://github.com/miclgael/deku/compare/v1.7.0...v1.7.1)
