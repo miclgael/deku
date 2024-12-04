@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Archived**. This project is archived, no longer maintained and may soon be removed.
+
 <!--
 Get your module up and running quickly.
 
